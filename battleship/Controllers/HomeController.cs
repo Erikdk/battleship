@@ -18,12 +18,13 @@ namespace battleship.Controllers
             _ctx = ctx;
         }
 
+             [Route("")]
         public IActionResult Index()
         {
             return View();
         }
 
-        [Route("new")]
+        [Route("new",Name=nameof(NewGame))]
         public IActionResult NewGame()
         {
             var game = new Game
